@@ -1,0 +1,14 @@
+name: inorbit
+
+services:
+  backend:
+    build:
+      context: ./backend
+      target: deps
+    command: pnpm dev
+    container_name: inorbit-backend
+    ports:
+      - 4000:4000
+    volumes:
+      - ./backend/:/app/
+      - /app/node_modules/
