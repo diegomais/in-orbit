@@ -5,8 +5,8 @@
   "main": "dist/http/server.js",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "dev": "tsx watch src/http/server.ts",
-    "start": "node dist/server.js"
+    "dev": "tsx watch --env-file .env.local src/http/server.ts",
+    "start": "node dist/http/server.js"
   },
   "repository": {
     "type": "git",
