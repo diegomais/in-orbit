@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/diegomais/in-orbit#readme",
   "devDependencies": {
+    "tsx": "^4.19.2",
     "typescript": "~5.5.2"
   }
 }
