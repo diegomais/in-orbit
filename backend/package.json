@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/diegomais/in-orbit/issues"
   },
-  "homepage": "https://github.com/diegomais/in-orbit#readme"
+  "homepage": "https://github.com/diegomais/in-orbit#readme",
+  "devDependencies": {
+    "typescript": "~5.5.2"
+  }
 }
