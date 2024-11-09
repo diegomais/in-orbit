@@ -12,10 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/diegomais/in-orbit.git"
   },
-  "keywords": [
-    "fastify",
-    "react"
-  ],
+  "keywords": ["fastify", "react"],
   "author": "Diego Mais <diegomais.pro@gmail.com>",
   "license": "MIT",
   "bugs": {
