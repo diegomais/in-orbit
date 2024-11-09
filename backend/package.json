@@ -1,0 +1,23 @@
+{
+  "name": "@diegomais/in-orbit",
+  "version": "0.0.1",
+  "description": "A goal tracking app with weekly progress.",
+  "main": "dist/http/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegomais/in-orbit.git"
+  },
+  "keywords": [
+    "fastify",
+    "react"
+  ],
+  "author": "Diego Mais <diegomais.pro@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diegomais/in-orbit/issues"
+  },
+  "homepage": "https://github.com/diegomais/in-orbit#readme"
+}
