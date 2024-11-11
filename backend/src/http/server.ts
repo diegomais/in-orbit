@@ -1,6 +1,6 @@
 import fastify from 'fastify'
 
-import env from '../config/env'
+import env from '@/config/env'
 
 const app = fastify()
 

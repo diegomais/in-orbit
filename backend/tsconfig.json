@@ -10,6 +10,9 @@
     "newLine": "lf",
     "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    },
     "outDir": "dist",
     "removeComments": true,
     "resolveJsonModule": true,
