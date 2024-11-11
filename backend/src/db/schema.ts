@@ -11,3 +11,15 @@ export const goals = pgTable('goals', {
     .notNull()
     .defaultNow(),
 })
+
+export const goalCompletions = pgTable('goal_completions', {
+  id: uuid('id')
+    .primaryKey()
+    .$defaultFn(() => randomUUID()),
+  goalId: uuid('goal_id')
+    .references(() => goals.id, { onDelete: 'cascade' })
+    .notNull(),
+  createdAt: timestamp('created_at', { withTimezone: true })
+    .notNull()
+    .defaultNow(),
+})

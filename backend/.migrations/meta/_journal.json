@@ -8,6 +8,13 @@
       "when": 1731284984678,
       "tag": "0000_add-goals-table",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1731285068119,
+      "tag": "0001_add-goal-completions-table",
+      "breakpoints": true
     }
   ]
 }
