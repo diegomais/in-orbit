@@ -7,8 +7,20 @@ services:
       target: deps
     command: pnpm dev
     container_name: inorbit-backend
+    environment:
+      - DATABASE_URL=postgresql://docker:docker@postgres:5432/inorbit
     ports:
       - 4000:4000
     volumes:
       - ./backend/:/app/
       - /app/node_modules/
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: inorbit-postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: inorbit
+      POSTGRES_USER: docker
+      POSTGRES_PASSWORD: docker
