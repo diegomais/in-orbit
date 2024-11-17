@@ -1,4 +1,4 @@
-import { and, asc, count, eq, sql } from 'drizzle-orm'
+import { and, asc, between, count, eq, sql } from 'drizzle-orm'
 
 import db from '@/db'
 import { goalCompletions, goals } from '@/db/schema'
@@ -34,15 +34,22 @@ export default async function listWeekPendingGoalsHandler() {
       )
   )
 
+  const startOfWeek = new Date()
+  startOfWeek.setDate(startOfWeek.getDate() - startOfWeek.getDay())
+  startOfWeek.setHours(0, 0, 0, 0)
+  const endOfWeek = new Date(startOfWeek)
+  endOfWeek.setDate(endOfWeek.getDate() + 6)
+  endOfWeek.setHours(23, 59, 59, 999)
+
   const goalsCompletionCounts = db.$with('goals_completion_counts').as(
     db
       .select({
-        goalId: goals.id,
+        goalId: goalCompletions.goalId,
         completionCount: count(goalCompletions.id).as('completionCount'),
       })
       .from(goalCompletions)
-      .innerJoin(goals, eq(goals.id, goalCompletions.goalId))
-      .groupBy(goals.id)
+      .where(between(goalCompletions.createdAt, startOfWeek, endOfWeek))
+      .groupBy(goalCompletions.goalId)
   )
 
   const pendingGoals = await db
