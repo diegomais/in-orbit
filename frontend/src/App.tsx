@@ -1,5 +1,7 @@
+import EmptyGoals from '@/components/templates/empty-goals'
+
 const App = () => {
-  return <div>Hello World!</div>
+  return <EmptyGoals />
 }
 
 export default App
