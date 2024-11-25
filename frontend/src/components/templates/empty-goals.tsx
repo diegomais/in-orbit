@@ -1,8 +1,6 @@
-import { Plus } from 'lucide-react'
-
 import logo from '@/assets/in-orbit-logo.svg'
 import letsStart from '@/assets/lets-start-illustration.svg'
-import Button from '@/components/ui/button'
+import CreateGoal from './create-goal'
 
 const EmptyGoals = () => {
   return (
@@ -15,10 +13,7 @@ const EmptyGoals = () => {
         now?
       </p>
 
-      <Button>
-        <Plus className="size-4" />
-        Add a goal
-      </Button>
+      <CreateGoal />
     </div>
   )
 }
